@@ -26,7 +26,7 @@ Select "Install" to add these to your list of supported boards.
 
 Now, when you select the Boards list, you will see a collection of new boards for PatternAgents.
 
-![PatternAgents Boards List](https://raw.githubusercontent.com/PatternAgents/Arduino_Boards/master/images/swirl.png?raw=true)
+![PatternAgents Boards List](https://raw.githubusercontent.com/PatternAgents/Arduino_Boards/master/images/arduino_board.png?raw=true)
 
 ### Notes
 
