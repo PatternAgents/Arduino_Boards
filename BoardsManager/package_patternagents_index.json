@@ -12,10 +12,10 @@
         {
           "name": "PatternAgents TSOC-ESP8266",
           "architecture": "esp8266",
-          "version": "1.6.4-673-g8cd3697",
-          "category": "",
-          "url": "https://github.com/PatternAgents/Arduino_Boards/raw/master/BoardsManager/patternagents-esp8266-1.1.0.zip",
-          "archiveFileName": "patternagents-esp8266-1.1.0.zip",
+          "version": "1.6.5-947-g39819f0",
+          "category": "ESP8266",
+          "url": "https://github.com/PatternAgents/Arduino_Boards/raw/master/BoardsManager/patternagents-esp8266-1.6.5-947-g39819f0.zip",
+          "archiveFileName": "patternagents-esp8266-1.6.5-947-g39819f0.zip",
           "checksum": "SHA-256:9d021a2e26145e868d2b4a49afe3c8c64fe238e270ad76e686c634a72fc7a35a",
           "size": "2302609",
           "help": {
