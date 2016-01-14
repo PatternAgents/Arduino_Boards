@@ -16,8 +16,8 @@
           "category": "Contributed",
           "url": "https://github.com/PatternAgents/Arduino_Boards/raw/master/BoardsManager/patternagents-esp8266-1.1.0.zip",
           "archiveFileName": "patternagents-esp8266-1.1.0.zip",
-          "checksum": "SHA-256:613c59a517465083f9259d3d4db22caf10e49b1e97cfc65bf914437140a5eaf4",
-          "size": "1929115",
+          "checksum": "SHA-256:9d021a2e26145e868d2b4a49afe3c8c64fe238e270ad76e686c634a72fc7a35a",
+          "size": "2302609",
           "help": {
             "online": "https://github.com/PatternAgents/Arduino_Boards/wiki"
           },
