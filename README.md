@@ -25,7 +25,7 @@ Each board will be added as an entry to the Arduino **Tools** > **Board** menu.
 
 To add board support for our products, go to **File** > **Preferences**, and paste this URL into the 'Additional Boards Manager URLs' input field:
 
-	https://github.com/PatternAgents/Arduino_Boards/master/BoardsManager/package_patternagents_index.json
+	https://raw.githubusercontent.com/PatternAgents/Arduino_Boards/master/BoardsManager/package_patternagents_index.json
 
 ![Adding a board manager list](http://patternagents.github.io/img/logos/swirl.png?raw=true)
 
