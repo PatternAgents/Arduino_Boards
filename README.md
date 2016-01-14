@@ -2,18 +2,6 @@
 
 Arduino IDE support repository for PatternAgents Boards
 
-#### AVR Boards
-
-* [TSOC-ATMEGA32U4](http://www.patternagents.com/store/)
-
-#### SAMD (ARM Cortex-M0+) Boards
-
-* [TSOC-SAMD21](http://www.patternagents.com/store/)
-
-#### XMC (ARM Cortex-M4F) Boards
-
-* [TSOC-XMC4200](http://www.patternagents.com/store/)
-
 #### ESP8266 Boards
 
 * [TSOC-ESP8266](http://www.patternagents.com/store/)
