@@ -60,7 +60,7 @@
           "category": "ESP8266", 
           "name": "esp8266", 
           "url": "https://github.com/PatternAgents/Arduino_Boards/raw/master/BoardsManager/patternagents-esp8266-2.0.0.zip", 
-          "checksum": "SHA-256:388d99b87359e95f8849b613f221154b9b77572906f86f3a9f426a22876130e8", 
+          "checksum": "SHA-256:51a7066dfde1da098ee146d54f3f8ce313b2bbf94c5ee0fdd91e46f4cec67db9", 
           "help": {
             "online": "http://esp8266.github.io/Arduino/versions/2.0.0/"
           }, 
@@ -116,7 +116,7 @@
               "name": "mkspiffs"
             }
           ], 
-          "size": "5404917"
+          "size": "5404813"
         }
       ], 
       "tools": [
