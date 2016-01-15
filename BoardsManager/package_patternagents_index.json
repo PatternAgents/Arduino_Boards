@@ -66,7 +66,7 @@
           }, 
           "version": "2.0.0", 
           "architecture": "esp8266", 
-          "archiveFileName": "esp8266-2.0.0.zip", 
+          "archiveFileName": "patternagents-esp8266-2.0.0.zip", 
           "boards": [
             {
               "name": "Generic ESP8266 Module"
