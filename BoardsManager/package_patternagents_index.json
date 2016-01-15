@@ -36,7 +36,11 @@
             }, 
             {
               "name": "SweetPea ESP-210"
+            },
+            {
+              "name": "TSOC-ESP8266"
             }
+
           ], 
           "toolsDependencies": [
             {
