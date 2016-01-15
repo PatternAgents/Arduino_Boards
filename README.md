@@ -19,7 +19,7 @@ To add board support for our products, go to **File** > **Preferences**, and pas
 
 This field can be found in 'Preferences...' under the Arduino File menu.
 
-Now, under the **Tools** > **Board** > **Boards Manager...**, if you type in "patternagents", you will see an option to install board files for PatternAgents Arduino compatible boards. 
+Now, under the **Tools** > **Board** > **Boards Manager...**, if you type in "esp8266", you will see an option to install board files for ESP8266 Arduino compatible boards. 
 Select "Install" to add these to your list of supported boards.
 
 ![PatternAgents Board](https://raw.githubusercontent.com/PatternAgents/Arduino_Boards/master/images/arduino_boardsmanager.png?raw=true)
