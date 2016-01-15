@@ -11,7 +11,7 @@
           "category": "ESP8266", 
           "name": "esp8266", 
           "url": "https://github.com/PatternAgents/Arduino_Boards/raw/master/BoardsManager/patternagents-esp8266-1.6.5-947-g39819f0.zip", 
-          "checksum": "SHA-256:81ecd0696aa953180fd1ae639df38157dc899a643b8b2ecf707612268f33f1d3", 
+          "checksum": "SHA-256:f9e9247b3b654413b7c2973566c5341c011c0192f90e89dfd4c257b8c0a326ff", 
           "help": {
             "online": "http://arduino.esp8266.com/versions/1.6.5-947-g39819f0/doc/reference.html"
           }, 
@@ -54,13 +54,13 @@
               "name": "xtensa-lx106-elf-gcc"
             }
           ], 
-          "size": "2211513"
+          "size": "2198129"
         }, 
         {
           "category": "ESP8266", 
           "name": "esp8266", 
           "url": "https://github.com/PatternAgents/Arduino_Boards/raw/master/BoardsManager/patternagents-esp8266-2.0.0.zip", 
-          "checksum": "SHA-256:51a7066dfde1da098ee146d54f3f8ce313b2bbf94c5ee0fdd91e46f4cec67db9", 
+          "checksum": "SHA-256:ba1fa6178fdb89b828ddbe39b6b24dc5ac0a444da49ab819a0af57958ee3b29b", 
           "help": {
             "online": "http://esp8266.github.io/Arduino/versions/2.0.0/"
           }, 
@@ -116,7 +116,7 @@
               "name": "mkspiffs"
             }
           ], 
-          "size": "5404813"
+          "size": "5386585"
         }
       ], 
       "tools": [
