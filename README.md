@@ -34,3 +34,11 @@ Now, when you select the Boards list, you will see a collection of new boards fo
 * If you are using Arduino 1.6.6 and the link isn't working for you, change "https" at the beginning of the link to "http" and try again.
 * Information on compiling and programming the bootloaders can be found in the bootloaders directory.
 * If you encounter a CRC Error, that means a previous install left files in the C:\Users\[username]\AppData\local\Arduino15 directory. Rename/Remove that directory and re-install.
+
+## Contributors
+
+The folks who make this project possible:
+
+ * PatternAgents, LLC
+ * Tom Moxon
+ * David Turnbull
