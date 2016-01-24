@@ -42,3 +42,7 @@ The folks who make this project possible:
  * PatternAgents, LLC
  * Tom Moxon
  * David Turnbull
+
+ ## Individual Contributor License Agreement
+ 
+ * [Individual Contributor License Agreement](ICLA_LICENSE.txt)
