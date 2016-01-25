@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+
+# Safety
+patternagents/esp8266/tools/dist/*
+patternagents/esp8266/tools/xtensa-lx106-elf/*
+patternagents/esp8266/tools/esptool/esptool
+patternagents/esp8266/tools/mkspiffs/mkspiffs
