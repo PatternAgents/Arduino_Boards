@@ -43,9 +43,11 @@ static const uint8_t MOSI  = 13;
 static const uint8_t MISO  = 12;
 static const uint8_t SCK   = 14;
 
-static const uint8_t BUILTIN_LED = 1;
+static const uint8_t BUILTIN_LED = 30;
 
 static const uint8_t A0 = 17;
+
+static const uint8_t SLOT_EN = 33;
 
 // These serial port names are intended to allow libraries and architecture-neutral
 // sketches to automatically default to the correct port name for a particular type
