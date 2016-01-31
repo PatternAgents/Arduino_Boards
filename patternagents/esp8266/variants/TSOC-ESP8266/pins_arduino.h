@@ -24,11 +24,15 @@
   $Id: wiring.h 249 2007-02-03 16:52:51Z mellis $
 */
 
+#ifndef TSOC_ESP8266
+#define TSOC_ESP8266  1
+#endif
+
 #ifndef Pins_Arduino_h
 #define Pins_Arduino_h
 
 #define EXTERNAL_NUM_INTERRUPTS 16
-#define NUM_DIGITAL_PINS        17
+#define NUM_DIGITAL_PINS        34
 #define NUM_ANALOG_INPUTS       1
 
 #define analogInputToDigitalPin(p)  ((p > 0)?NOT_A_PIN:0)
