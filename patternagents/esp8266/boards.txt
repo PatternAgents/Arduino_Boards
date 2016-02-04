@@ -10,219 +10,6 @@ menu.Debug=Debug port
 menu.DebugLevel=Debug Level
 
 ##############################################################
-generic.name=Generic ESP8266 Module
-
-generic.upload.tool=esptool
-generic.upload.speed=115200
-generic.upload.resetmethod=ck
-generic.upload.maximum_size=434160
-generic.upload.maximum_data_size=81920
-generic.upload.wait_for_upload_port=true
-generic.serial.disableDTR=true
-generic.serial.disableRTS=true
-
-generic.build.mcu=esp8266
-generic.build.f_cpu=80000000L
-generic.build.board=ESP8266_ESP01
-generic.build.core=esp8266
-generic.build.variant=generic
-generic.build.flash_mode=qio
-generic.build.spiffs_pagesize=256
-generic.build.debug_port=
-generic.build.debug_level=
-
-generic.menu.UploadTool.esptool=Serial
-generic.menu.UploadTool.esptool.upload.tool=esptool
-generic.menu.UploadTool.esptool.upload.verbose=-vv
-generic.menu.UploadTool.espota=OTA
-generic.menu.UploadTool.espota.upload.tool=espota
-
-generic.menu.CpuFrequency.80=80 MHz
-generic.menu.CpuFrequency.80.build.f_cpu=80000000L
-generic.menu.CpuFrequency.160=160 MHz
-generic.menu.CpuFrequency.160.build.f_cpu=160000000L
-
-generic.menu.FlashFreq.40=40MHz
-generic.menu.FlashFreq.40.build.flash_freq=40
-generic.menu.FlashFreq.80=80MHz
-generic.menu.FlashFreq.80.build.flash_freq=80
-
-generic.menu.FlashMode.dio=DIO
-generic.menu.FlashMode.dio.build.flash_mode=dio
-generic.menu.FlashMode.qio=QIO
-generic.menu.FlashMode.qio.build.flash_mode=qio
-
-generic.menu.UploadSpeed.115200=115200
-generic.menu.UploadSpeed.115200.upload.speed=115200
-generic.menu.UploadSpeed.9600=9600
-generic.menu.UploadSpeed.9600.upload.speed=9600
-generic.menu.UploadSpeed.57600=57600
-generic.menu.UploadSpeed.57600.upload.speed=57600
-generic.menu.UploadSpeed.256000.windows=256000
-generic.menu.UploadSpeed.256000.upload.speed=256000
-generic.menu.UploadSpeed.230400.linux=230400
-generic.menu.UploadSpeed.230400.macosx=230400
-generic.menu.UploadSpeed.230400.upload.speed=230400
-generic.menu.UploadSpeed.460800.linux=460800
-generic.menu.UploadSpeed.460800.macosx=460800
-generic.menu.UploadSpeed.460800.upload.speed=460800
-generic.menu.UploadSpeed.512000.windows=512000
-generic.menu.UploadSpeed.512000.upload.speed=512000
-generic.menu.UploadSpeed.921600=921600
-generic.menu.UploadSpeed.921600.upload.speed=921600
-
-generic.menu.FlashSize.512K64=512K (64K SPIFFS)
-generic.menu.FlashSize.512K64.build.flash_size=512K
-generic.menu.FlashSize.512K64.build.flash_ld=eagle.flash.512k64.ld
-generic.menu.FlashSize.512K64.build.spiffs_start=0x6B000
-generic.menu.FlashSize.512K64.build.spiffs_end=0x7B000
-generic.menu.FlashSize.512K64.build.spiffs_blocksize=4096
-generic.menu.FlashSize.512K64.upload.maximum_size=434160
-
-generic.menu.FlashSize.512K0=512K (no SPIFFS)
-generic.menu.FlashSize.512K0.build.flash_size=512K
-generic.menu.FlashSize.512K0.build.flash_ld=eagle.flash.512k0.ld
-generic.menu.FlashSize.512K0.upload.maximum_size=499696
-
-generic.menu.FlashSize.1M512=1M (512K SPIFFS)
-generic.menu.FlashSize.1M512.build.flash_size=1M
-generic.menu.FlashSize.1M512.build.flash_ld=eagle.flash.1m512.ld
-generic.menu.FlashSize.1M512.build.spiffs_start=0x7B000
-generic.menu.FlashSize.1M512.build.spiffs_end=0xFB000
-generic.menu.FlashSize.1M512.build.spiffs_blocksize=8192
-generic.menu.FlashSize.1M512.upload.maximum_size=499696
-
-generic.menu.FlashSize.1M256=1M (256K SPIFFS)
-generic.menu.FlashSize.1M256.build.flash_size=1M
-generic.menu.FlashSize.1M256.build.flash_ld=eagle.flash.1m256.ld
-generic.menu.FlashSize.1M256.build.spiffs_start=0xBB000
-generic.menu.FlashSize.1M256.build.spiffs_end=0xFB000
-generic.menu.FlashSize.1M256.build.spiffs_blocksize=4096
-generic.menu.FlashSize.1M256.upload.maximum_size=761840
-
-generic.menu.FlashSize.1M192=1M (192K SPIFFS)
-generic.menu.FlashSize.1M192.build.flash_size=1M
-generic.menu.FlashSize.1M192.build.flash_ld=eagle.flash.1m192.ld
-generic.menu.FlashSize.1M192.build.spiffs_start=0xCB000
-generic.menu.FlashSize.1M192.build.spiffs_end=0xFB000
-generic.menu.FlashSize.1M192.build.spiffs_blocksize=4096
-generic.menu.FlashSize.1M192.upload.maximum_size=827376
-
-generic.menu.FlashSize.1M160=1M (160K SPIFFS)
-generic.menu.FlashSize.1M160.build.flash_size=1M
-generic.menu.FlashSize.1M160.build.flash_ld=eagle.flash.1m160.ld
-generic.menu.FlashSize.1M160.build.spiffs_start=0xD3000
-generic.menu.FlashSize.1M160.build.spiffs_end=0xFB000
-generic.menu.FlashSize.1M160.build.spiffs_blocksize=4096
-generic.menu.FlashSize.1M160.upload.maximum_size=860144
-
-generic.menu.FlashSize.1M144=1M (144K SPIFFS)
-generic.menu.FlashSize.1M144.build.flash_size=1M
-generic.menu.FlashSize.1M144.build.flash_ld=eagle.flash.1m144.ld
-generic.menu.FlashSize.1M144.build.spiffs_start=0xD7000
-generic.menu.FlashSize.1M144.build.spiffs_end=0xFB000
-generic.menu.FlashSize.1M144.build.spiffs_blocksize=4096
-generic.menu.FlashSize.1M144.upload.maximum_size=876528
-
-generic.menu.FlashSize.1M128=1M (128K SPIFFS)
-generic.menu.FlashSize.1M128.build.flash_size=1M
-generic.menu.FlashSize.1M128.build.flash_ld=eagle.flash.1m128.ld
-generic.menu.FlashSize.1M128.build.spiffs_start=0xDB000
-generic.menu.FlashSize.1M128.build.spiffs_end=0xFB000
-generic.menu.FlashSize.1M128.build.spiffs_blocksize=4096
-generic.menu.FlashSize.1M128.upload.maximum_size=892912
-
-generic.menu.FlashSize.1M64=1M (64K SPIFFS)
-generic.menu.FlashSize.1M64.build.flash_size=1M
-generic.menu.FlashSize.1M64.build.flash_ld=eagle.flash.1m64.ld
-generic.menu.FlashSize.1M64.build.spiffs_start=0xEB000
-generic.menu.FlashSize.1M64.build.spiffs_end=0xFB000
-generic.menu.FlashSize.1M64.build.spiffs_blocksize=4096
-generic.menu.FlashSize.1M64.upload.maximum_size=958448
-
-generic.menu.FlashSize.2M=2M (1M SPIFFS)
-generic.menu.FlashSize.2M.build.flash_size=2M
-generic.menu.FlashSize.2M.build.flash_ld=eagle.flash.2m.ld
-generic.menu.FlashSize.2M.build.spiffs_start=0x100000
-generic.menu.FlashSize.2M.build.spiffs_end=0x1FB000
-generic.menu.FlashSize.2M.build.spiffs_blocksize=8192
-generic.menu.FlashSize.2M.upload.maximum_size=1044464
-
-generic.menu.FlashSize.4M1M=4M (1M SPIFFS)
-generic.menu.FlashSize.4M1M.build.flash_size=4M
-generic.menu.FlashSize.4M1M.build.flash_ld=eagle.flash.4m1m.ld
-generic.menu.FlashSize.4M1M.build.spiffs_start=0x300000
-generic.menu.FlashSize.4M1M.build.spiffs_end=0x3FB000
-generic.menu.FlashSize.4M1M.build.spiffs_blocksize=8192
-generic.menu.FlashSize.4M1M.build.spiffs_pagesize=256
-generic.menu.FlashSize.4M1M.upload.maximum_size=1044464
-
-generic.menu.FlashSize.4M3M=4M (3M SPIFFS)
-generic.menu.FlashSize.4M3M.build.flash_size=4M
-generic.menu.FlashSize.4M3M.build.flash_ld=eagle.flash.4m.ld
-generic.menu.FlashSize.4M3M.build.spiffs_start=0x100000
-generic.menu.FlashSize.4M3M.build.spiffs_end=0x3FB000
-generic.menu.FlashSize.4M3M.build.spiffs_blocksize=8192
-generic.menu.FlashSize.4M3M.upload.maximum_size=1044464
-
-generic.menu.ResetMethod.ck=ck
-generic.menu.ResetMethod.ck.upload.resetmethod=ck
-generic.menu.ResetMethod.nodemcu=nodemcu
-generic.menu.ResetMethod.nodemcu.upload.resetmethod=nodemcu
-
-generic.menu.Debug.Disabled=Disabled
-generic.menu.Debug.Disabled.build.debug_port=
-generic.menu.Debug.Serial=Serial
-generic.menu.Debug.Serial.build.debug_port=-DDEBUG_ESP_PORT=Serial
-generic.menu.Debug.Serial1=Serial1
-generic.menu.Debug.Serial1.build.debug_port=-DDEBUG_ESP_PORT=Serial1
-
-generic.menu.DebugLevel.None____=None
-generic.menu.DebugLevel.None____.build.debug_level=
-generic.menu.DebugLevel.Core____=Core
-generic.menu.DebugLevel.Core____.build.debug_level=-DDEBUG_ESP_CORE
-generic.menu.DebugLevel.SSL_____=Core + SSL
-generic.menu.DebugLevel.SSL_____.build.debug_level=-DDEBUG_ESP_CORE -DDEBUG_ESP_SSL
-generic.menu.DebugLevel.WiFic___=Core + WiFi
-generic.menu.DebugLevel.WiFic___.build.debug_level=-DDEBUG_ESP_CORE -DDEBUG_ESP_WIFI
-generic.menu.DebugLevel.WiFi____=WiFi
-generic.menu.DebugLevel.WiFi____.build.debug_level=-DDEBUG_ESP_WIFI
-generic.menu.DebugLevel.HTTPClient=HTTPClient
-generic.menu.DebugLevel.HTTPClient.build.debug_level=-DDEBUG_ESP_HTTP_CLIENT
-generic.menu.DebugLevel.HTTPClient2=HTTPClient + SSL
-generic.menu.DebugLevel.HTTPClient2.build.debug_level=-DDEBUG_ESP_HTTP_CLIENT -DDEBUG_ESP_SSL
-generic.menu.DebugLevel.HTTPUpdate=HTTPUpdate
-generic.menu.DebugLevel.HTTPUpdate.build.debug_level=-DDEBUG_ESP_HTTP_UPDATE
-generic.menu.DebugLevel.HTTPUpdate2=HTTPClient + HTTPUpdate
-generic.menu.DebugLevel.HTTPUpdate2.build.debug_level=-DDEBUG_ESP_HTTP_UPDATE -DDEBUG_ESP_HTTP_UPDATE
-generic.menu.DebugLevel.HTTPUpdate3=HTTPClient + HTTPUpdate + Updater
-generic.menu.DebugLevel.HTTPUpdate3.build.debug_level=-DDEBUG_ESP_HTTP_UPDATE -DDEBUG_ESP_HTTP_UPDATE -DDEBUG_ESP_UPDATER
-generic.menu.DebugLevel.HTTPServer=HTTPServer
-generic.menu.DebugLevel.HTTPServer.build.debug_level=-DDEBUG_ESP_HTTP_SERVER
-generic.menu.DebugLevel.UPDATER=Updater
-generic.menu.DebugLevel.UPDATER.build.debug_level=-DDEBUG_ESP_UPDATER
-generic.menu.DebugLevel.OTA_____=OTA
-generic.menu.DebugLevel.OTA_____.build.debug_level=-DDEBUG_ESP_OTA
-generic.menu.DebugLevel.OTA2____=OTA + Updater
-generic.menu.DebugLevel.OTA2____.build.debug_level=-DDEBUG_ESP_OTA -DDEBUG_ESP_UPDATER
-generic.menu.DebugLevel.all_____=All
-generic.menu.DebugLevel.all_____.build.debug_level=-DDEBUG_ESP_CORE -DDEBUG_ESP_SSL -DDEBUG_ESP_WIFI -DDEBUG_ESP_HTTP_CLIENT -DDEBUG_ESP_HTTP_UPDATE -DDEBUG_ESP_HTTP_SERVER -DDEBUG_ESP_UPDATER -DDEBUG_ESP_OTA
-
-# disabled because espressif's bootloader refuses to write above 4M
-# generic.menu.FlashSize.8M=8M (7M SPIFFS)
-# generic.menu.FlashSize.8M.build.flash_size=1M
-# generic.menu.FlashSize.8M.build.flash_ld=eagle.flash.8m.ld
-# generic.menu.FlashSize.8M.build.spiffs_start=0x100000
-# generic.menu.FlashSize.8M.build.spiffs_end=0x800000
-# generic.menu.FlashSize.8M.build.spiffs_blocksize=8192
-# generic.menu.FlashSize.16M=16M (15M SPIFFS)
-# generic.menu.FlashSize.16M.build.flash_size=1M
-# generic.menu.FlashSize.16M.build.flash_ld=eagle.flash.16m.ld
-# generic.menu.FlashSize.16M.build.spiffs_start=0x100000
-# generic.menu.FlashSize.16M.build.spiffs_end=0x1000000
-# generic.menu.FlashSize.16M.build.spiffs_blocksize=8192
-
-##############################################################
 TSOC-ESP8266.name=TSOC-ESP8266 by PatternAgents
 
 TSOC-ESP8266.upload.tool=esptool
@@ -236,10 +23,10 @@ TSOC-ESP8266.serial.disableRTS=true
 
 TSOC-ESP8266.build.mcu=esp8266
 TSOC-ESP8266.build.f_cpu=80000000L
-TSOC-ESP8266.build.board=ESP8266_ESP01
+TSOC-ESP8266.build.board=ESP8266_ESP12
 TSOC-ESP8266.build.core=esp8266
 TSOC-ESP8266.build.variant=TSOC-ESP8266
-TSOC-ESP8266.build.flash_mode=qio
+TSOC-ESP8266.build.flash_mode=QIO
 TSOC-ESP8266.build.spiffs_pagesize=256
 TSOC-ESP8266.build.debug_port=
 TSOC-ESP8266.build.debug_level=
@@ -265,24 +52,24 @@ TSOC-ESP8266.menu.FlashMode.dio.build.flash_mode=dio
 TSOC-ESP8266.menu.FlashMode.qio=QIO
 TSOC-ESP8266.menu.FlashMode.qio.build.flash_mode=qio
 
-TSOC-ESP8266.menu.UploadSpeed.115200=115200
-TSOC-ESP8266.menu.UploadSpeed.115200.upload.speed=115200
-TSOC-ESP8266.menu.UploadSpeed.9600=9600
-TSOC-ESP8266.menu.UploadSpeed.9600.upload.speed=9600
-TSOC-ESP8266.menu.UploadSpeed.57600=57600
-TSOC-ESP8266.menu.UploadSpeed.57600.upload.speed=57600
-TSOC-ESP8266.menu.UploadSpeed.256000.windows=256000
-TSOC-ESP8266.menu.UploadSpeed.256000.upload.speed=256000
-TSOC-ESP8266.menu.UploadSpeed.230400.linux=230400
-TSOC-ESP8266.menu.UploadSpeed.230400.macosx=230400
-TSOC-ESP8266.menu.UploadSpeed.230400.upload.speed=230400
+TSOC-ESP8266.menu.UploadSpeed.921600=921600
+TSOC-ESP8266.menu.UploadSpeed.921600.upload.speed=921600
+TSOC-ESP8266.menu.UploadSpeed.512000.windows=512000
+TSOC-ESP8266.menu.UploadSpeed.512000.upload.speed=512000
 TSOC-ESP8266.menu.UploadSpeed.460800.linux=460800
 TSOC-ESP8266.menu.UploadSpeed.460800.macosx=460800
 TSOC-ESP8266.menu.UploadSpeed.460800.upload.speed=460800
-TSOC-ESP8266.menu.UploadSpeed.512000.windows=512000
-TSOC-ESP8266.menu.UploadSpeed.512000.upload.speed=512000
-TSOC-ESP8266.menu.UploadSpeed.921600=921600
-TSOC-ESP8266.menu.UploadSpeed.921600.upload.speed=921600
+TSOC-ESP8266.menu.UploadSpeed.230400.linux=230400
+TSOC-ESP8266.menu.UploadSpeed.230400.macosx=230400
+TSOC-ESP8266.menu.UploadSpeed.230400.upload.speed=230400
+TSOC-ESP8266.menu.UploadSpeed.256000.windows=256000
+TSOC-ESP8266.menu.UploadSpeed.256000.upload.speed=256000
+TSOC-ESP8266.menu.UploadSpeed.115200=115200
+TSOC-ESP8266.menu.UploadSpeed.115200.upload.speed=115200
+TSOC-ESP8266.menu.UploadSpeed.57600=57600
+TSOC-ESP8266.menu.UploadSpeed.57600.upload.speed=57600
+TSOC-ESP8266.menu.UploadSpeed.9600=9600
+TSOC-ESP8266.menu.UploadSpeed.9600.upload.speed=9600
 
 TSOC-ESP8266.menu.FlashSize.512K64=512K (64K SPIFFS)
 TSOC-ESP8266.menu.FlashSize.512K64.build.flash_size=512K
@@ -353,6 +140,44 @@ TSOC-ESP8266.menu.FlashSize.4M3M.build.spiffs_start=0x100000
 TSOC-ESP8266.menu.FlashSize.4M3M.build.spiffs_end=0x3FB000
 TSOC-ESP8266.menu.FlashSize.4M3M.build.spiffs_blocksize=8192
 TSOC-ESP8266.menu.FlashSize.4M3M.upload.maximum_size=1044464
+
+TSOC-ESP8266.menu.Debug.Disabled=Disabled
+TSOC-ESP8266.menu.Debug.Disabled.build.debug_port=
+TSOC-ESP8266.menu.Debug.Serial=Serial
+TSOC-ESP8266.menu.Debug.Serial.build.debug_port=-DDEBUG_ESP_PORT=Serial
+TSOC-ESP8266.menu.Debug.Serial1=Serial1
+TSOC-ESP8266.menu.Debug.Serial1.build.debug_port=-DDEBUG_ESP_PORT=Serial1
+
+TSOC-ESP8266.menu.DebugLevel.None____=None
+TSOC-ESP8266.menu.DebugLevel.None____.build.debug_level=
+TSOC-ESP8266.menu.DebugLevel.Core____=Core
+TSOC-ESP8266.menu.DebugLevel.Core____.build.debug_level=-DDEBUG_ESP_CORE
+TSOC-ESP8266.menu.DebugLevel.SSL_____=Core + SSL
+TSOC-ESP8266.menu.DebugLevel.SSL_____.build.debug_level=-DDEBUG_ESP_CORE -DDEBUG_ESP_SSL
+TSOC-ESP8266.menu.DebugLevel.WiFic___=Core + WiFi
+TSOC-ESP8266.menu.DebugLevel.WiFic___.build.debug_level=-DDEBUG_ESP_CORE -DDEBUG_ESP_WIFI
+TSOC-ESP8266.menu.DebugLevel.WiFi____=WiFi
+TSOC-ESP8266.menu.DebugLevel.WiFi____.build.debug_level=-DDEBUG_ESP_WIFI
+TSOC-ESP8266.menu.DebugLevel.HTTPClient=HTTPClient
+TSOC-ESP8266.menu.DebugLevel.HTTPClient.build.debug_level=-DDEBUG_ESP_HTTP_CLIENT
+TSOC-ESP8266.menu.DebugLevel.HTTPClient2=HTTPClient + SSL
+TSOC-ESP8266.menu.DebugLevel.HTTPClient2.build.debug_level=-DDEBUG_ESP_HTTP_CLIENT -DDEBUG_ESP_SSL
+TSOC-ESP8266.menu.DebugLevel.HTTPUpdate=HTTPUpdate
+TSOC-ESP8266.menu.DebugLevel.HTTPUpdate.build.debug_level=-DDEBUG_ESP_HTTP_UPDATE
+TSOC-ESP8266.menu.DebugLevel.HTTPUpdate2=HTTPClient + HTTPUpdate
+TSOC-ESP8266.menu.DebugLevel.HTTPUpdate2.build.debug_level=-DDEBUG_ESP_HTTP_UPDATE -DDEBUG_ESP_HTTP_UPDATE
+TSOC-ESP8266.menu.DebugLevel.HTTPUpdate3=HTTPClient + HTTPUpdate + Updater
+TSOC-ESP8266.menu.DebugLevel.HTTPUpdate3.build.debug_level=-DDEBUG_ESP_HTTP_UPDATE -DDEBUG_ESP_HTTP_UPDATE -DDEBUG_ESP_UPDATER
+TSOC-ESP8266.menu.DebugLevel.HTTPServer=HTTPServer
+TSOC-ESP8266.menu.DebugLevel.HTTPServer.build.debug_level=-DDEBUG_ESP_HTTP_SERVER
+TSOC-ESP8266.menu.DebugLevel.UPDATER=Updater
+TSOC-ESP8266.menu.DebugLevel.UPDATER.build.debug_level=-DDEBUG_ESP_UPDATER
+TSOC-ESP8266.menu.DebugLevel.OTA_____=OTA
+TSOC-ESP8266.menu.DebugLevel.OTA_____.build.debug_level=-DDEBUG_ESP_OTA
+TSOC-ESP8266.menu.DebugLevel.OTA2____=OTA + Updater
+TSOC-ESP8266.menu.DebugLevel.OTA2____.build.debug_level=-DDEBUG_ESP_OTA -DDEBUG_ESP_UPDATER
+TSOC-ESP8266.menu.DebugLevel.all_____=All
+TSOC-ESP8266.menu.DebugLevel.all_____.build.debug_level=-DDEBUG_ESP_CORE -DDEBUG_ESP_SSL -DDEBUG_ESP_WIFI -DDEBUG_ESP_HTTP_CLIENT -DDEBUG_ESP_HTTP_UPDATE -DDEBUG_ESP_HTTP_SERVER -DDEBUG_ESP_UPDATER -DDEBUG_ESP_OTA
 
 # disabled because espressif's bootloader refuses to write above 4M
 # TSOC-ESP8266.menu.FlashSize.8M=8M (7M SPIFFS)
