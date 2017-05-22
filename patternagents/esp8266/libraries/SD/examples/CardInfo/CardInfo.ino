@@ -37,11 +37,21 @@ const int chipSelect = 4;
 void setup()
 {
   // Open serial communications and wait for port to open:
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial) {
     ; // wait for serial port to connect. Needed for Leonardo only
   }
-
+  pinMode(SLOT_RED, OUTPUT);     // Initialize the RED LED pin as an output
+  pinMode(SLOT_GREEN, OUTPUT);   // Initialize the GREEN LED pin as an output
+  pinMode(SLOT_BLUE, OUTPUT);    // Initialize the BLUE LED pin as an output
+  digitalWrite(SLOT_RED, LOW);
+  delay(1000);
+  pinMode(SLOT_EN, OUTPUT);
+  digitalWrite(SLOT_EN, LOW);
+  digitalWrite(SLOT_GREEN, LOW);
+  digitalWrite(SLOT_RED, HIGH);
+  delay(1000);
+  
 
   Serial.print("\nInitializing SD card...");
 
@@ -104,6 +114,11 @@ void setup()
 
   // list all files in the card with date and size
   root.ls(LS_R | LS_DATE | LS_SIZE);
+
+  Serial.println("done!");
+  digitalWrite(SLOT_EN, HIGH);
+  digitalWrite(SLOT_GREEN, HIGH);
+  digitalWrite(SLOT_BLUE, LOW);
 }
 
 

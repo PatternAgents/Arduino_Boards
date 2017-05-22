@@ -1,0 +1,37 @@
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  text-align: left;
+}
+.section-heading {
+}
+
+/* Banner
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.banner {
+}
+.banner-heading {
+}
+
+/* get-cmd
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.get-cmd {
+}
+
+
+/* respdata - response data window
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.resp-data {
+  overflow: scroll;
+  max-height: 320px;
+  width: 100%;
+}
+.respdata-heading {
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+  border-radius: 100px;
+}
+

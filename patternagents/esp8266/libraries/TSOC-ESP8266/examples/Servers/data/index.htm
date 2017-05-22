@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <title>thingSoC ESP8266</title>
+  <meta charset="utf-8">
+  <meta name="description" content="thingSoC ESP8266 Demo">
+  <meta name="author" content="PatternAgents,LLC">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, user-scalable=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- SanSerif by default (no room for local fonts) -->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <style>
+      body {background-color: ffffff; font-family: Sans-Serif; color: #000000;}
+      #top {width:100%;position:fixed;left:0;top:0;background-color:#FFF;}
+      .command {color: #0000aa;}
+      .result {color: #009900;}
+      .error {color: #aa0000;}
+      .message {color: #006666;}
+    </style>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+  <link rel="stylesheet" href="./css/custom.css">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="scripts/jquery-1.11.3.min.js"></script>
+  <script src="scripts/jquery.imagemapster.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  </head>
+  <body>
+  <!-- Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+   <div class="section banner">
+    <div class="container">
+      <div class="row">
+        <div class="one-third column">
+		  <a href="http://www.thingsoc.com"><img src="images/favicon.png" height="128px" width="128px" alt="thingSoC" title="thingSoC"></a>
+        </div>
+        <div class="two-thirds column">
+			<h1 class="banner-heading">PatternAgents</h1>
+		    Embedis Server Demo for ESP8266<br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section get-cmd">
+    <div class="container">
+      <div class="row">
+			(Enter "commands" to get a list)<br>
+            <form action="javascript:">
+              <input type="text" name="fname" style="width:100%">
+            </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="section resp-data">
+    <div class="container">
+	  <div class="row">
+	    <div id="pad" style="width:1px"> </div>
+        <pre></pre>
+      </div>
+    </div>
+  </div>
+
+<!-- End of Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </body>
+
+<!--embedis ajax command/response functions
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+        
+    var timer;
+        
+    $(function() {
+      timer = setTimeout(embedis, 100);
+      $(window).resize(resize);
+      $('input')[0].focus();
+      $('form').submit(function(){
+        embedis($('input').val());
+        $('input').val('');
+        return false;
+      });
+    });
+    
+    function resize() {
+      $('#pad').height($('#top').height());
+    }
+        
+    function embedis(command) {
+      clearTimeout(timer);
+      timer = null;
+      if (command && command.length == 0) command = null;
+      $.ajax({
+        url: "/embedis",
+        method: 'POST',
+        data: {cmd: command},
+        success: function(data) {
+          response(data, command);
+        },
+        complete: function(data) {
+          if (!timer) timer = setTimeout(embedis, 1000);
+        }
+      });
+    }
+    
+    function response(data, command) {
+      $('#pad').height($('#top').height());
+      var isScrolledToBottom = $(window).scrollTop() + $(window).height() >= $(document).height();
+      if (command) {
+        $('pre').append('<span class="command">' + escapeToHtml(command) + "\r\n</span>");
+        if (data.charAt(0)=="-") {
+          $('pre').append('<span class="error">' + escapeToHtml(data) + '</span>');
+        } else {
+          $('pre').append('<span class="result">' + escapeToHtml(data) + '</span>');
+        }
+      } else if (data && data.length) {
+        message(data);
+      }
+      if (command || isScrolledToBottom) $(document).scrollTop( $(document).height());
+    }
+  
+    function escapeToHtml(string) {
+      return String(string).replace(/[&<>]/g, function (s) {
+        return {'&': '&amp;', '<': '&lt;', '>': '&gt;'}[s];
+      });
+    }
+    
+    function message(data) {
+      var parts = data.split("*3\r\n");
+      for (i = 1; i < parts.length; ++i) {
+        var part = parts[i];
+        rx = /\+([^\r\n]+)\r\n\+([^\r\n]+)\r\n\+([^\r\n]+)\r\n/.exec(part);
+        if (!rx || rx[1] != "message") {
+          part = "*3\r\n" + part;
+        } else {
+          part = "Message from " + rx[2] + ": " + rx[3] + "\r\n";
+        }
+        $('pre').append('<span class="message">' + escapeToHtml(part) + '</span>')        
+      }
+    }
+  </script>
+</html>
